@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic GUI Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#4e73df,#1cc88a);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            background:white;
+            width:350px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 15px 30px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        h2{
+            margin-bottom:20px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border-radius:8px;
+            border:1px solid #ccc;
+            outline:none;
+        }
+
+        input:focus{
+            border-color:#4e73df;
+            box-shadow:0 0 5px #4e73df;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#4e73df;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            margin-top:10px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#2e59d9;
+        }
+
+        .message{
+            margin-top:15px;
+            color:green;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Simple GUI Form</h2>
+
+    <input type="text" id="name" placeholder="Enter Your Name">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="showMessage()">Submit</button>
+
+    <div class="message" id="message"></div>
+</div>
+
+<script>
+function showMessage(){
+    let name = document.getElementById("name").value;
+    if(name !== ""){
+        document.getElementById("message").innerHTML =
+        "Welcome " + name + " 🎉";
+    } else {
+        document.getElementById("message").innerHTML =
+        "Please enter your name!";
+    }
+}
+</script>
+
+</body>
+</html>

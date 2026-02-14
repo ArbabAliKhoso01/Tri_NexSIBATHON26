@@ -1,0 +1,268 @@
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#4e73df,#1cc88a);
+    min-height:100vh;
+}
+    .main-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    padding:60px 20px;
+    flex-wrap:wrap;
+    /* ===== CARD ===== */
+.form-box{
+    background:white;
+    width:350px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    text-align:center;
+    transition:0.3s;
+    display:none; /* hide by default */
+}
+
+.form-box.active{
+    display:block; /* show only active card */
+}
+
+.form-box:hover{
+    transform:translateY(-5px);
+}
+
+.form-box h2{
+    margin-bottom:20px;
+}
+
+.form-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+.form-box input:focus{
+    border-color:#4e73df;
+    box-shadow:0 0 6px #4e73df;
+}
+
+.form-box button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#4e73df;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    background:#2e59d9;
+}
+
+.switch-text{
+    margin-top:15px;
+}
+
+.switch-text a{
+    color:#4e73df;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .main-container{
+        flex-direction:column;
+    }
+}
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#4e73df,#1cc88a);
+    min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    height:65px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#4e73df;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#4e73df;
+}
+
+.btn-nav{
+    background:#4e73df;
+    color:white !important;
+    padding:7px 14px;
+    border-radius:6px;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* ===== MAIN ===== */
+.main-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    padding:60px 20px;
+    flex-wrap:wrap;
+}
+
+/* ===== CARD ===== */
+.form-box{
+    background:white;
+    width:350px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    text-align:center;
+    transition:0.3s;
+    display:none; /* hide by default */
+}
+
+.form-box.active{
+    display:block; /* show only active card */
+}
+
+.form-box:hover{
+    transform:translateY(-5px);
+}
+
+.form-box h2{
+    margin-bottom:20px;
+}
+
+.form-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    transition:0.3s;
+}
+
+.form-box input:focus{
+    border-color:#4e73df;
+    box-shadow:0 0 6px #4e73df;
+}
+
+.form-box button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#4e73df;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    background:#2e59d9;
+}
+
+.switch-text{
+    margin-top:15px;
+}
+
+.switch-text a{
+    color:#4e73df;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .nav-links{
+        position:absolute;
+        top:65px;
+        right:-100%;
+        flex-direction:column;
+        background:white;
+        width:200px;
+        padding:20px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        transition:0.3s;
+    }
+    .nav-links.active{
+        right:0;
+    }
+    .menu-toggle{
+        display:block;
+    }
+    .main-container{
+        flex-direction:column;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form input, form button {
+    margin: 5px;
+}

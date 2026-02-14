@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">EduBase</div>
+    <ul class="nav-links" id="navLinks">
+        <a href="{{ url_for('home') }}">Home</a>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="{{ url_for('logout') }}" class="btn-nav">Logout</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+</nav>
+<h1>Welcome, {{ username }}!</h1>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
